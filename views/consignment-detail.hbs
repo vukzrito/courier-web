@@ -1,0 +1,74 @@
+<div class="page-section nopadding">
+  <div class="grey">
+    <div class="container">
+      <div class="topheader">
+        <h1>
+          Track Consignment
+        </h1>
+      </div>
+      <div class="breadcrumbs">
+        <ul class="list-inline">
+          <li>
+            <a href="/">
+              Home
+            </a>
+            /
+          </li>
+          <li>
+            <span class="">
+              Track Consignment
+            </span>
+            <a href="/consignment">/</a>
+          </li>
+           <li>
+            <span class="current">
+              {{consignment.id}}
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="col-md-8 offset-2 row" style="min-height: 500px;">
+    <table class="rtable">
+      <tr>
+        <th>
+          Date
+        </th>
+        <th>
+          Branch
+        </th>
+        <th>
+          Action
+        </th>
+        <th>
+          Action by
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+      {{#each transactions}}
+        <tr>
+          <td>
+            {{date}}
+          </td>
+          <td>
+            JHB
+          </td>
+          <td>
+            {{action}}
+          </td>
+          <td>
+            Admin
+          </td>
+          <td>
+            {{description}}
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</div>

@@ -13,14 +13,34 @@ router.get('/:waybillNo', async function (req, res, next) {
         console.log(consigment);
         res.render('consignment-detail', { consigment, transactions })
     } else {
-        res.render(`waybill : ${waybillNo}`);
+        res.render('consignment');
     }
 
 });
+/* GET consignment */
+router.get('/', async function (req, res, next) {
+    let waybillNo = req.params.waybillNo;
+    console.log(waybillNo)
+    //todo get consignment from db
 
+    res.render('consignment');
+
+
+});
 /* POST consignment */
-router.post('/', function (req, res, next) {
-    res.send('respond with a resource');
+router.post('/', async (req, res, next) => {
+    let waybillNo = req.body.waybill;
+    console.log(waybillNo)
+    //todo get consignment from db
+    if (waybillNo != null) {
+        let consigment = await getConsignment(waybillNo);
+        let transactions = await getTransactions(consigment.id);
+        consigment = { ...consigment, transactions }
+        console.log(consigment);
+        res.render('consignment-detail', { consigment, transactions })
+    } else {
+        res.render('consignment');
+    }
 });
 
 function getConsignment(waybillNo) {
@@ -33,6 +53,7 @@ function getConsignment(waybillNo) {
           WHERE waybillNo='${waybillNo}'`, (err, result) => {
             if (err)
                 reject(err);
+            console.log(" Result : " +result);    
             resolve(JSON.parse(JSON.stringify(result))[0]);
         });
     })

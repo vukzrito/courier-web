@@ -590,15 +590,15 @@
     </div>
     <form id="login" action="/" method="post"> <a class="close" href="#"><i class="fa fa-times"></i></a>
         <div class="user-login-content">
-            <h1>Sign In</h1>
-            <p class="sign-in-details">Sign in to Go for getting all details</p>
+            <h1>Log In</h1>
+            <p class="sign-in-details">Dispatcher login</p>
             <p class="status"></p> <input id="username" type="text" name="username" class="form-control" placeholder="username"> <input id="password" type="password" name="password" class="form-control" placeholder="*****"> <input class="submit_button button form-control"
                 type="submit" value="Sign in now" name="submit"> <a class="lost" href="/my-account/lost-password/index.html">Forgot password?</a> <input type="hidden" id="security" name="security" value="f6477aa137" /><input type="hidden" name="_wp_http_referer"
                 value="/themes/gocourierwp/order-tracking/" />
         </div>
-        <div class="login-form-boootom-content">
+        {{!-- <div class="login-form-boootom-content">
             <p>Do not have an account?</p> <a href="/my-account/index.html">Create a free account</a>
-        </div>
+        </div> --}}
     </form>
     <div id="wrapper">
         <header class="header-main">
@@ -611,7 +611,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 padding-zero">
-                    <div class="top-header-info"> <a href="#" class="login_button" id="show_login">sign in</a>
+                    <div class="top-header-info"> <a href="#" class="login_button" id="show_login">Admin Login</a>
                         <p><i class="fa fa-phone" aria-hidden="true"></i>Call Us Now: <span>+27 065 8311 929</span></p>
                     </div>
                 </div>
@@ -629,21 +629,16 @@
                                     <div class="navbar-header">
                                         <div class="hidden-sec slim-wrap" data-image="http://event-theme.com/themes/gocourierwp/wp-content/themes/gocourier/images/logo.png" data-homelink="http://event-theme.com/themes/gocourierwp/">
                                             <ul id="menu-header-menu" class="menu-items">
-                                                <li id="menu-item-303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-303">
-                                                    <a href="/index.html">Home</a>
-                                                    <ul class="sub-menu">
-                                                        <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-222">
-                                                            <a href="/index.html">Home 1</a></li>
-                                                        <li id="menu-item-302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302">
-                                                            <a href="/home-2/index.html">Home 2</a></li>
-                                                    </ul>
+                                                <li id="menu-item-303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  menu-item-303">
+                                                    <a href="/">Home</a>
+                                                   
                                                 </li>
                                                 <li id="menu-item-223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-223">
-                                                    <a href="/about-us/">About</a></li>
+                                                    <a href="#">About</a></li>
                                                 <li id="menu-item-206" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-78 current_page_item menu-item-206">
                                                     <a href="/consignment" aria-current="page">Tracking</a></li>
                                                 <li id="menu-item-207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207">
-                                                    <a href="/pricing">Pricing</a></li>
+                                                    <a href="#pricing">Pricing</a></li>
                                                 <li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205">
                                                     <a href="/contact-us/">Contact</a></li>
                                                 

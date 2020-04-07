@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 
         console.log(JSON.stringify(results))
     })
-    res.render('index', { title: 'Express' });
+    res.render('admin', { title: 'Express' });
 });
 
 module.exports = router;
